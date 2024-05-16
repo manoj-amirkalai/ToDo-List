@@ -1,0 +1,150 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* #5b7065, black */
+body {
+  background: rgb(36, 77, 191); 
+  background: -webkit-radial-gradient(center, rgb(90, 221, 221) 0%, rgba(0, 0, 0, 1.0) 100%);
+  background: -moz-radial-gradient(center, rgb(60, 220, 220) 0%, rgba(78, 161, 216, 0.663) 100%);
+  background: radial-gradient(ellipse at center, rgb(85, 195, 195) 0%, #5d68cb 100%);
+  min-height: 100vh;
+}
+
+button {
+  height: fit-content;
+  cursor: pointer;
+  color: #183744;
+  background-color: #e8e8e8;
+}
+
+.app {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:5% auto;
+  color: white;
+}
+
+.input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0px 0px 10px 0px;
+}.app h1{
+  margin: 2% 0;
+}
+
+.to-do-input input {
+  width: 250px;
+  font-family: inherit;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  margin: 4% 0;
+  outline: none;
+}
+
+.to-do-input button {
+  color: #5b7065;
+  font-family: inherit;
+  border: none;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.to-do-list i {
+  color: #24fc08;
+  cursor: pointer;
+}
+
+.to-do-list .fa-pen-to-square {
+  color: #e93609;
+  height: min-content;
+}
+
+.to-do-list button {
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.input-controller {
+  display: flex;
+  gap: 10px;
+}
+
+.input-controller textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  line-height: 1.4;
+  color: white;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: inherit;
+  transition: all 0.30s ease-in-out;
+}
+
+textarea:focus {
+  box-shadow: 0 0 5px white;
+}
+
+.edit-controller {
+  display: flex;
+  gap: 5px;
+}
+
+.update-controller {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .app {
+    width: 100%;
+    text-align: center;
+  }
+
+  .input-header {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .to-do-input {
+    display: flex;
+    align-items: center;
+  }
+
+  .to-do-input input {
+    width: 250px;
+  }
+
+}
